@@ -15,3 +15,13 @@ function hide() {
   numeri.classList.add("hidden");
   console.log(numeri);
 }
+// Creo funzione per chiedere risposte all'utente
+setTimeout(askNumbers, 9000);
+function askNumbers() {
+  let numeriUtente = [];
+  for (let c = 0; c < 5; c++) {
+    datoUtente = prompt("Inserisci numero");
+    numeriUtente.push(datoUtente);
+  }
+  return numeriUtente;
+}
