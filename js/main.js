@@ -1,11 +1,22 @@
-// document.getElementById("start").addEventListener("click" ())
 const randomNumbers = getRandomNumber(500, 5);
-console.log(randomNumbers);
-let numeri = document.getElementById("numUno");
+// creo funzione Start Game
+document.getElementById("start").addEventListener("click", () => {
+  startGame();
+});
+function startGame() {
+  // document.getElementById("start").addEventListener("click" ())
+  console.log(randomNumbers);
+  document.getElementById("numUno").innerHTML = randomNumbers[0];
+  document.getElementById("numDue").innerHTML = randomNumbers[1];
+  document.getElementById("numTre").innerHTML = randomNumbers[2];
+  document.getElementById("numQuattro").innerHTML = randomNumbers[3];
+  document.getElementById("numCinque").innerHTML = randomNumbers[4];
+  setTimeout(hide, 3000);
+  setTimeout(askNumbers, 4000);
+}
 
 // Creo funzione dinamica per generare n numeri casuali con scelta range massimo
-numeri.innerHTML = randomNumbers;
-
+// numeri.innerHTML = randomNumbers;
 function getRandomNumber(max, quantity) {
   let risultato = [];
   for (let c = 0; c < quantity; c++) {
@@ -15,17 +26,20 @@ function getRandomNumber(max, quantity) {
   return risultato;
 }
 // Creo funzione per aggiungere class "hidden"
-setTimeout(hide, 3000);
+
 function hide() {
-  numeri.classList.add("hidden");
-  console.log(numeri);
+  document.getElementById("numUno").classList.add("hidden");
+  document.getElementById("numDue").classList.add("hidden");
+  document.getElementById("numTre").classList.add("hidden");
+  document.getElementById("numQuattro").classList.add("hidden");
+  document.getElementById("numCinque").classList.add("hidden");
 }
-// Creo funzione per chiedere risposte all'utente
-setTimeout(askNumbers, 4000);
+//
 let numeriUtente = [];
-// setTimeout(() => {
-//   console.log(numeriUtente);
-// }, 5000);
+
+/**
+ *  Creo funzione per chiedere risposte all'utente
+ */
 function askNumbers() {
   for (let c = 0; c < 5; c++) {
     datoUtente = parseInt(prompt("Inserisci numero"));
@@ -36,9 +50,10 @@ function askNumbers() {
   // console.log(numeriUtente);
   arrayComparing();
 }
+
 let numeriCorretti = [];
 let numeriNonCorretti = [];
-
+// creo funzione per confrontare gli array
 function arrayComparing() {
   for (let index = 0; index < randomNumbers.length; index++) {
     let isincluded = randomNumbers.includes(numeriUtente[index]);
@@ -49,6 +64,13 @@ function arrayComparing() {
       numeriNonCorretti.push(numeriUtente[index]);
     }
   }
-  console.log("I numeri corretti sono ", numeriCorretti);
-  console.log("I numeri sbagliati sono ", numeriNonCorretti);
+  showResult();
+  // alert("I numeri corretti sono ", numeriCorretti);
+  // console.log("I numeri sbagliati sono ", numeriNonCorretti);
+}
+
+// Creo funzione per mostrare i risultati
+function showResult() {
+  document.getElementById("resultOk").innerHTML = numeriCorretti;
+  document.getElementById("resultKo").innerHTML = numeriNonCorretti;
 }

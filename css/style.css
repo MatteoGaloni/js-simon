@@ -3,13 +3,13 @@ body {
 }
 
 
-#container {
+.container {
     display: flex;
     margin-bottom: 2rem;
 }
 
 .hidden {
-    display: none !important;
+    opacity: 0;
 }
 
 .box {
@@ -22,4 +22,5 @@ body {
     justify-content: center;
     border-radius: 8%;
     font-size: 1.5rem;
+    text-align: center;
 }
