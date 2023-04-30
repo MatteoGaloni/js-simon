@@ -1,3 +1,25 @@
+body {
+    font-family: sans-serif;
+}
+
+
+#container {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
 .hidden {
-    display: none;
+    display: none !important;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    background: bisque;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8%;
+    font-size: 1.5rem;
 }
