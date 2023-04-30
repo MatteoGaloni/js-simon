@@ -35,4 +35,12 @@ h1 {
 .btn {
     background-color: rgba(169, 169, 169, 0.3);
     color: white;
+    cursor: pointer;
+}
+
+.content {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

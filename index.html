@@ -7,22 +7,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS-SIMON</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 </head>
 
 <body>
     <h1>MEMORY GAME</h1>
     <div class="container">
-        <div id="numUno" class="box">NUMERO</div>
-        <div id="numDue" class="box">NUMERO</div>
-        <div id="numTre" class="box">NUMERO</div>
-        <div id="numQuattro" class="box">NUMERO</div>
-        <div id="numCinque" class="box">NUMERO</div>
+        <div id="numDue" class="box"><i class="fa-solid fa-question fa-beat"></i></div>
+        <div id="numTre" class="box"><i class="fa-solid fa-question fa-beat"></i></div>
+        <div id="numUno" class="box"><i class="fa-solid fa-question fa-beat"></i></div>
+        <div id="numQuattro" class="box"><i class="fa-solid fa-question fa-beat"></i></div>
+        <div id="numCinque" class="box"><i class="fa-solid fa-question fa-beat"></i></div>
 
     </div>
     <div class="container">
-        <div id="resultOk" class="box">Numeri Corretti</div>
+        <div class="left content">
+            <h3><i class="fa-regular fa-thumbs-up"></i></h3>
+            <div id="resultOk" class="box"><i class="fa-regular fa-thumbs-up"></i></div>
+        </div>
         <button id="start" class="box btn">START GAME</button>
-        <div id="resultKo" class="box">Numeri non Corretti</div>
+        <div class="right content">
+            <h3><i class="fa-sharp fa-regular fa-thumbs-down"></i></h3>
+            <div id="resultKo" class="box"><i class="fa-sharp fa-regular fa-thumbs-down"></i></div>
+        </div>
     </div>
 
     <script src="./js/main.js"></script>

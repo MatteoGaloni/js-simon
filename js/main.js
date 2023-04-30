@@ -11,8 +11,8 @@ function startGame() {
   document.getElementById("numTre").innerHTML = randomNumbers[2];
   document.getElementById("numQuattro").innerHTML = randomNumbers[3];
   document.getElementById("numCinque").innerHTML = randomNumbers[4];
-  setTimeout(hide, 3000);
-  setTimeout(askNumbers, 4000);
+  setTimeout(hide, 8000);
+  setTimeout(askNumbers, 9000);
 }
 
 // Creo funzione dinamica per generare n numeri casuali con scelta range massimo
