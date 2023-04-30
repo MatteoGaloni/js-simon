@@ -1,7 +1,14 @@
 body {
     font-family: sans-serif;
+    background-image: url(../img/wallpaperNumbers.jpg);
 }
 
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+    margin: 3rem 0;
+}
 
 .container {
     display: flex;
@@ -15,7 +22,7 @@ body {
 .box {
     width: 200px;
     height: 200px;
-    background: bisque;
+    background: rgba(190, 34, 34, 0.8);
     margin: auto;
     display: flex;
     align-items: center;
@@ -23,4 +30,9 @@ body {
     border-radius: 8%;
     font-size: 1.5rem;
     text-align: center;
+}
+
+.btn {
+    background-color: rgba(169, 169, 169, 0.3);
+    color: white;
 }
