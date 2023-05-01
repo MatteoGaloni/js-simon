@@ -1,8 +1,8 @@
 const randomNumbers = getRandomNumber(500, 5);
-// creo funzione Start Game
 document.getElementById("start").addEventListener("click", () => {
   startGame();
 });
+// creo funzione Start Game
 function startGame() {
   // document.getElementById("start").addEventListener("click" ())
   console.log(randomNumbers);
@@ -14,7 +14,6 @@ function startGame() {
   setTimeout(hide, 8000);
   setTimeout(askNumbers, 9000);
 }
-
 // Creo funzione dinamica per generare n numeri casuali con scelta range massimo
 // numeri.innerHTML = randomNumbers;
 function getRandomNumber(max, quantity) {
@@ -26,7 +25,6 @@ function getRandomNumber(max, quantity) {
   return risultato;
 }
 // Creo funzione per aggiungere class "hidden"
-
 function hide() {
   document.getElementById("numUno").classList.add("hidden");
   document.getElementById("numDue").classList.add("hidden");
@@ -36,7 +34,6 @@ function hide() {
 }
 //
 let numeriUtente = [];
-
 /**
  *  Creo funzione per chiedere risposte all'utente
  */
@@ -68,7 +65,6 @@ function arrayComparing() {
   // alert("I numeri corretti sono ", numeriCorretti);
   // console.log("I numeri sbagliati sono ", numeriNonCorretti);
 }
-
 // Creo funzione per mostrare i risultati
 function showResult() {
   document.getElementById("resultOk").innerHTML = numeriCorretti;
